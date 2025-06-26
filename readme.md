@@ -1,4 +1,4 @@
-# My New Reflex Project
+# reflex-sample01
 
 このプロジェクトは [Reflex](https://reflex.dev/) を使用して作成されたサンプルアプリケーションです。
 
@@ -23,6 +23,6 @@ reflex run
 
 ### 3. ブラウザで確認
 
-サーバーが起動したら、Webブラウザで以下のURLにアクセスしてください。
+サーバーが起動したら、Web ブラウザで以下の URL にアクセスしてください。
 
 [http://localhost:3000](http://localhost:3000)
