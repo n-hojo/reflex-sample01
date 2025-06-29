@@ -9,26 +9,29 @@ def index() -> rx.Component:
             rx.text("これは複数ページサイトのサンプルです。",
                     font_size="1.5em", color="gray.700"),
             rx.divider(),
-            rx.link(
-                # size="lg" を size="3" に変更
-                rx.button("アバウトページへ", color_scheme="blue",
-                          size="3", radius="full"),
-                href="/about",
-                _hover={"text_decoration": "none"}
-            ),
-            rx.link(
-                # size="lg" を size="3" に変更
-                rx.button("お問い合わせページへ", color_scheme="green",
-                          size="3", radius="full"),
-                href="/contact",
-                _hover={"text_decoration": "none"}
-            ),
-            rx.link(
-                # size="lg" を size="3" に変更
-                rx.button("タブページへ", color_scheme="purple",
-                          size="3", radius="full"),
-                href="/tabs",
-                _hover={"text_decoration": "none"}
+            rx.hstack(
+                rx.link(
+                    # size="lg" を size="3" に変更
+                    rx.button("アバウトページへ", color_scheme="blue",
+                              size="3", radius="full"),
+                    href="/about",
+                    _hover={"text_decoration": "none"}
+                ),
+                rx.link(
+                    # size="lg" を size="3" に変更
+                    rx.button("お問い合わせページへ", color_scheme="green",
+                              size="3", radius="full"),
+                    href="/contact",
+                    _hover={"text_decoration": "none"}
+                ),
+                rx.link(
+                    # size="lg" を size="3" に変更
+                    rx.button("タブページへ", color_scheme="purple",
+                              size="3", radius="full"),
+                    href="/tabs",
+                    _hover={"text_decoration": "none"}
+                ),
+                spacing="5",
             ),
             spacing="7",
             align="center",
