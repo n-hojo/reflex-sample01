@@ -5,31 +5,42 @@ def index() -> rx.Component:
     """トップページを定義します。"""
     return rx.center(
         rx.vstack(
-            rx.heading("Reflex へようこそ！", size="9", color="teal.600"),
-            rx.text("これは複数ページサイトのサンプルです。",
-                    font_size="1.5em", color="gray.700"),
+            rx.heading(
+                "窓口ML自動化システムダッシュボード", size="8", color="teal.600"
+            ),
+            rx.text(
+                "ボタンをクリックしてください",
+                font_size="1.5em",
+                color="gray.700",
+            ),
             rx.divider(),
             rx.hstack(
                 rx.link(
                     # size="lg" を size="3" に変更
-                    rx.button("アバウトページへ", color_scheme="blue",
-                              size="3", radius="full"),
+                    rx.button(
+                        "アバウトページへ", color_scheme="blue", size="3", radius="full"
+                    ),
                     href="/about",
-                    _hover={"text_decoration": "none"}
+                    _hover={"text_decoration": "none"},
                 ),
                 rx.link(
                     # size="lg" を size="3" に変更
-                    rx.button("お問い合わせページへ", color_scheme="green",
-                              size="3", radius="full"),
+                    rx.button(
+                        "お問い合わせページへ",
+                        color_scheme="green",
+                        size="3",
+                        radius="full",
+                    ),
                     href="/contact",
-                    _hover={"text_decoration": "none"}
+                    _hover={"text_decoration": "none"},
                 ),
                 rx.link(
                     # size="lg" を size="3" に変更
-                    rx.button("タブページへ", color_scheme="purple",
-                              size="3", radius="full"),
-                    href="/tabs",
-                    _hover={"text_decoration": "none"}
+                    rx.button(
+                        "設定ページへ", color_scheme="purple", size="3", radius="full"
+                    ),
+                    href="/setuptabs",
+                    _hover={"text_decoration": "none"},
                 ),
                 spacing="5",
             ),
@@ -40,7 +51,7 @@ def index() -> rx.Component:
             border_radius="xl",
             box_shadow="lg",
             max_width="600px",
-            width="90%"
+            width="90%",
         ),
         height="100vh",
         width="100vw",
@@ -53,15 +64,17 @@ def about() -> rx.Component:
     return rx.center(
         rx.vstack(
             rx.heading("私たちについて", size="9", color="purple.600"),
-            rx.text("私たちはReflexを使って素晴らしいWebアプリを作成しています。",
-                    font_size="1.5em", color="gray.700"),
+            rx.text(
+                "私たちはReflexを使って素晴らしいWebアプリを作成しています。",
+                font_size="1.5em",
+                color="gray.700",
+            ),
             rx.divider(),
             rx.link(
                 # size="lg" を size="3" に変更
-                rx.button("ホームへ戻る", color_scheme="blue",
-                          size="3", radius="full"),
+                rx.button("ホームへ戻る", color_scheme="blue", size="3", radius="full"),
                 href="/",
-                _hover={"text_decoration": "none"}
+                _hover={"text_decoration": "none"},
             ),
             spacing="7",
             align="center",
@@ -70,7 +83,7 @@ def about() -> rx.Component:
             border_radius="xl",
             box_shadow="lg",
             max_width="600px",
-            width="90%"
+            width="90%",
         ),
         height="100vh",
         width="100vw",
@@ -83,15 +96,17 @@ def contact() -> rx.Component:
     return rx.center(
         rx.vstack(
             rx.heading("お問い合わせ", size="9", color="orange.600"),
-            rx.text("ご質問があれば、お気軽にお問い合わせください。",
-                    font_size="1.5em", color="gray.700"),
+            rx.text(
+                "ご質問があれば、お気軽にお問い合わせください。",
+                font_size="1.5em",
+                color="gray.700",
+            ),
             rx.divider(),
             rx.link(
                 # size="lg" を size="3" に変更
-                rx.button("ホームへ戻る", color_scheme="blue",
-                          size="3", radius="full"),
+                rx.button("ホームへ戻る", color_scheme="blue", size="3", radius="full"),
                 href="/",
-                _hover={"text_decoration": "none"}
+                _hover={"text_decoration": "none"},
             ),
             spacing="7",
             align="center",
@@ -100,7 +115,7 @@ def contact() -> rx.Component:
             border_radius="xl",
             box_shadow="lg",
             max_width="600px",
-            width="90%"
+            width="90%",
         ),
         height="100vh",
         width="100vw",
@@ -141,7 +156,7 @@ def tabs_page() -> rx.Component:
             rx.link(
                 rx.button("ホームへ戻る", color_scheme="blue", size="3", radius="full"),
                 href="/",
-                _hover={"text_decoration": "none"}
+                _hover={"text_decoration": "none"},
             ),
             spacing="7",
             align="center",
@@ -150,7 +165,7 @@ def tabs_page() -> rx.Component:
             border_radius="xl",
             box_shadow="lg",
             max_width="600px",
-            width="90%"
+            width="90%",
         ),
         height="100vh",
         width="100vw",
@@ -163,4 +178,4 @@ app = rx.App()
 app.add_page(index, route="/")
 app.add_page(about, route="/about")
 app.add_page(contact, route="/contact")
-app.add_page(tabs_page, route="/tabs")
+app.add_page(tabs_page, route="/setuptabs")
